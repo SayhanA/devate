@@ -1,26 +1,86 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
+  --secondary-bg: #042241;
   --foreground: #171717;
+  --border: #b9b9b9;
+  --text-primary: #000;
+  --text-secondary: #3f3f3f;
+  --font-sans: "Inter", sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-secondary-bg: var(--secondary-bg);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-border: var(--border);
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --color-tp: var(--text-primary);
+  --color-ts: var(--text-secondary);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
+    --secondary-bg: #042241;
     --foreground: #ededed;
+    --border: #6e6d6d;
+    --text-primary: #ffffff;
+    --text-secondary: #dad8d8;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-sans);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --background: #ffffff;
+  --secondary-bg: #042241;
+  --foreground: #171717;
+  --border: #b9b9b9;
+  --text-primary: #000;
+  --text-secondary: #3f3f3f;
+
+  /* Fonts */
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "Outfit", sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-secondary-bg: var(--secondary-bg);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-tp: var(--text-primary);
+  --color-ts: var(--text-secondary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --secondary-bg: #042241;
+    --foreground: #ededed;
+    --border: #6e6d6d;
+    --text-primary: #ffffff;
+    --text-secondary: #dad8d8;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
 }

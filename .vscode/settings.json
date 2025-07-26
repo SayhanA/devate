@@ -6,8 +6,8 @@
   "editor.insertSpaces": true,
   "editor.quoteStyle": "double",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.organizeImports": true
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
   },
   "terminal.integrated.fontSize": 12,
   "files.trimTrailingWhitespace": true,
