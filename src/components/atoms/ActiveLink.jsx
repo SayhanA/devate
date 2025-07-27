@@ -12,9 +12,9 @@ const ActiveLink = ({ href = "/", children, className = "", ...props }) => {
     <Link
       href={href}
       className={twMerge(
-        "transition-colors duration-200 text-text-dark",
+        "duration-200 text-text-dark transition-all ease-in-out",
         isActive
-          ? "font-semibold text-blue-600"
+          ? "font-semibold text-blue-600 border-0 border-b"
           : "text-ts hover:text-blue-500",
         className
       )}

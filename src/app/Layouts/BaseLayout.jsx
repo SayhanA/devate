@@ -6,7 +6,13 @@ import Header from "@/components/organisms/Header";
 import AuthLayout from "./AuthLayout";
 
 const BaseLayout = ({ children = null, className = "", ...props }) => {
-  const isAuthPage = ["/login", "/signup"].includes(usePathname());
+  const isAuthPage = [
+    "/login",
+    "/signup",
+    "/forgot-password",
+    "/verify-email",
+    "/reset-password",
+  ].includes(usePathname());
 
   return (
     <div className={className} {...props}>

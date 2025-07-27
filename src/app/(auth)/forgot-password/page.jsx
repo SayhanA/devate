@@ -9,9 +9,9 @@ import {
 import Button from "@/components/atoms/Button";
 import CustomLink from "@/components/atoms/CustomLink";
 import Text from "@/components/atoms/Test";
-import { SignupForm } from "@/components/molicuses/SignUpForm";
+import { ForgotPasswordForm } from "@/components/molicuses/ForgotPasswordForm";
 
-const SignupPage = () => {
+const ForgotPasswordPage = () => {
   return (
     <section className="flex w-full">
       <div className="bg-secondary-bg w-full h-screen flex justify-center items-center">
@@ -23,10 +23,11 @@ const SignupPage = () => {
             <div>
               <Text className="text-sm text-gray-400">Welcome to </Text>
               <h1 className="text-4xl font-bold text-white bg-clip-text">
-                Debate Sign Up
+                Debate Forgot Password
               </h1>
               <Text className="text-white mt-1">
-                If you already have account?{" "}
+                We have sent you six digit verification code. Please input it in
+                below field.
                 <CustomLink
                   href="/login"
                   className="border-0 p-0 text-blue-500 underline"
@@ -86,11 +87,11 @@ const SignupPage = () => {
       </div>
       <div className="w-full h-screen flex justify-center items-center">
         <div className="w-[70%] min-h-[400px]">
-          <SignupForm />
+          <ForgotPasswordForm />
         </div>
       </div>
     </section>
   );
 };
 
-export default SignupPage;
+export default ForgotPasswordPage;

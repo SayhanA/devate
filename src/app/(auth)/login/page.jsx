@@ -1,5 +1,96 @@
+import LogoSvg from "@/assets/svgs/LogoSvg";
+import { FcGoogle } from "react-icons/fc";
+import {
+  IoChatbubbleEllipsesOutline,
+  IoLogoFacebook,
+  IoPeopleOutline,
+  IoTrophyOutline,
+} from "react-icons/io5";
+import Button from "@/components/atoms/Button";
+import CustomLink from "@/components/atoms/CustomLink";
+import Text from "@/components/atoms/Test";
+import { LoginForm } from "@/components/molicuses/LoginForm";
+
 const LoginPage = () => {
-  return <div>LoginPage</div>;
+  return (
+    <section className="flex w-full">
+      <div className="bg-secondary-bg w-full h-screen flex justify-center items-center">
+        <div className="w-[70%] ">
+          <div className="flex items-center space-x-3 ">
+            <div className="bg-gradient-to-r from-blue-900 to-secondary-bg p-3 rounded-xl">
+              <LogoSvg className="w-16 h-16" />
+            </div>
+            <div>
+              <Text className="text-sm text-gray-400">Welcome to </Text>
+              <h1 className="text-4xl font-bold text-white bg-clip-text">
+                Debate Login
+              </h1>
+              <Text className="text-white mt-1">
+                Don't have an account?{" "}
+                <CustomLink
+                  href="/signup"
+                  className="border-0 p-0 text-blue-500 underline"
+                >
+                  Sign Up
+                </CustomLink>
+              </Text>
+            </div>
+          </div>
+          <div className="space-y-6 mt-8 text-white">
+            <div className="flex items-center space-x-4">
+              <div className="bg-purple-500/20 p-3 rounded-lg">
+                <IoPeopleOutline className="h-6 w-6 text-purple-400" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">Join the Community</h3>
+                <p className="text-slate-400">
+                  Connect with debaters worldwide
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-4">
+              <div className="bg-pink-500/20 p-3 rounded-lg">
+                <IoTrophyOutline className="h-6 w-6 text-pink-400" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">Compete & Win</h3>
+                <p className="text-slate-400">Climb the leaderboards</p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-4">
+              <div className="bg-blue-500/20 p-3 rounded-lg">
+                <IoChatbubbleEllipsesOutline className="h-6 w-6 text-blue-400" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">Sharpen Your Skills</h3>
+                <p className="text-slate-400">Practice with AI and humans</p>
+              </div>
+            </div>
+          </div>
+          <div className="w-full mx-auto gap-3 flex mt-8">
+            <Button
+              secondBtn
+              className="flex items-center w-full gap-3 rounded-sm text-white py-3"
+            >
+              <FcGoogle />
+              Google
+            </Button>
+            <Button className="flex items-center w-full gap-3 rounded-sm">
+              <IoLogoFacebook />
+              Facebook
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div className="w-full h-screen flex justify-center items-center">
+        <div className="w-[70%] min-h-[400px]">
+          <LoginForm />
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default LoginPage;

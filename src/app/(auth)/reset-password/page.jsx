@@ -9,9 +9,9 @@ import {
 import Button from "@/components/atoms/Button";
 import CustomLink from "@/components/atoms/CustomLink";
 import Text from "@/components/atoms/Test";
-import { SignupForm } from "@/components/molicuses/SignUpForm";
+import { ResetPasswordForm } from "@/components/molicuses/ResetPasswordForm";
 
-const SignupPage = () => {
+const ResetPasswordPage = () => {
   return (
     <section className="flex w-full">
       <div className="bg-secondary-bg w-full h-screen flex justify-center items-center">
@@ -23,19 +23,20 @@ const SignupPage = () => {
             <div>
               <Text className="text-sm text-gray-400">Welcome to </Text>
               <h1 className="text-4xl font-bold text-white bg-clip-text">
-                Debate Sign Up
+                Debate Reset Password
               </h1>
-              <Text className="text-white mt-1">
-                If you already have account?{" "}
-                <CustomLink
-                  href="/login"
-                  className="border-0 p-0 text-blue-500 underline"
-                >
-                  Login
-                </CustomLink>
-              </Text>
             </div>
           </div>
+          <Text className="text-white mt-3">
+            You have received an e-mail with a verification code. Please check
+            you inbox. Don't get Email?
+            <CustomLink
+              href="/forgot-password"
+              className="border-0 p-0 text-blue-500 underline ml-2"
+            >
+              Forgot Password
+            </CustomLink>
+          </Text>
           <div className="space-y-6 mt-8 text-white">
             <div className="flex items-center space-x-4">
               <div className="bg-purple-500/20 p-3 rounded-lg">
@@ -86,11 +87,11 @@ const SignupPage = () => {
       </div>
       <div className="w-full h-screen flex justify-center items-center">
         <div className="w-[70%] min-h-[400px]">
-          <SignupForm />
+          <ResetPasswordForm />
         </div>
       </div>
     </section>
   );
 };
 
-export default SignupPage;
+export default ResetPasswordPage;
