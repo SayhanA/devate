@@ -1,6 +1,8 @@
 import dummyImg from "@/assets/images/vs.avif";
 import Link from "next/link";
 import { DebateCard } from "../atoms/DebateCard";
+import SectionTitle from "../atoms/SectionTitle";
+import Text from "../atoms/Test";
 
 const FeatureDebates = () => {
   const featuredDebates = [
@@ -65,10 +67,11 @@ const FeatureDebates = () => {
   return (
     <section className="py-12 px-4">
       <div className="container mx-auto">
+        <SectionTitle tag="Blogs" title="Explore the Debate World" />
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold text-text-dark">
-            Trending Debates
-          </h2>
+          <Text className="mt-5">
+            Enhance your skills in critical thinking and debating.
+          </Text>
           <Link
             href="/debates"
             className="px-4 py-2 text-text-lite bg-background border border-border hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200"
