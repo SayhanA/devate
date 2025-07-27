@@ -1,11 +1,12 @@
 import Button from "@/components/atoms/Button";
 import Text from "@/components/atoms/Test";
+import DebateArenaVideo from "@/components/molicuses/DevateArenaVideo";
 
 const HomePage = () => {
   return (
     <>
-      <section className="px-5 bg-secondary-bg h-screen">
-        <div className="container mx-auto">
+      <section className="px-5 bg-secondary-bg">
+        <div className="container mx-auto pb-10">
           <Text
             as="h1"
             className="text-5xl text-center pt-40 max-w-[800px] mx-auto leading-[70px] text-white"
@@ -22,6 +23,10 @@ const HomePage = () => {
             <Button secondBtn className="text-white">
               + Create Devate
             </Button>
+          </div>
+
+          <div className="w-4/5 h-[600px] mx-auto my-20 rounded-2xl overflow-hidden">
+            <DebateArenaVideo />
           </div>
         </div>
       </section>
