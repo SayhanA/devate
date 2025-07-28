@@ -69,8 +69,10 @@ const FeatureDebates = () => {
       <div className="container mx-auto">
         <SectionTitle tag="Blogs" title="Explore the Debate World" />
         <div className="flex justify-between items-center mb-8">
-          <Text className="mt-5">
-            Enhance your skills in critical thinking and debating.
+          <Text className="mt-5 max-w-[700px]">
+            Enhance your skills in critical thinking and debating. Lorem, ipsum
+            dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur!
+            Officiis neque .
           </Text>
           <Link
             href="/debates"

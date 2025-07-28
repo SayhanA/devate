@@ -338,15 +338,15 @@ const ClientSection = () => {
   return (
     <section className="bg-background/0 overflow-hidden py-16">
       <div className="mb-12 text-center">
-        <SectionTitle>Enthusiast Debaters</SectionTitle>
-        <SectionDescripton className="mt-5">
+        <SectionTitle tag="Clients" title="Enthusiast Debaters"></SectionTitle>
+        <SectionDescripton className="my-10 mx-auto">
           Join thousands of satisfied customers who trust RentCar for their
           transportation needs. From business professionals to families, we
           serve everyone with excellence.
         </SectionDescripton>
       </div>
 
-      <div className="mt-10 space-y-2">
+      <div className="mt-20 space-y-2">
         {/* Row 1 */}
         <div className="scroller relative">
           <div className="scroller_inner flex w-screen space-x-6">
