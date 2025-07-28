@@ -5,7 +5,7 @@ import CustomLink from "../atoms/CustomLink";
 
 const Header = () => {
   return (
-    <header className="px-5 absolute top-0 w-full">
+    <header className="px-5 absolute top-0 w-full z-50">
       <div className="flex items-center justify-between h-fit py-4 container mx-auto">
         <CustomLink
           id="logo"

@@ -181,7 +181,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-600">
@@ -208,13 +207,12 @@ export default function Footer() {
             </a>
           </div>
         </div>
-
-        {/* Position Button */}
+        {/* Position Button
         <div className="fixed bottom-6 right-6">
           <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors shadow-lg">
             Position
           </button>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
