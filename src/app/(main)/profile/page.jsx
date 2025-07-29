@@ -2,7 +2,6 @@ import { auth } from "@/auth";
 
 export default async function DebateProfilePage() {
   const session = await auth();
-
   const debater = {
     name: "Alex Rivera",
     username: "@alexrivera",

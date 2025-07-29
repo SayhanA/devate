@@ -1,11 +1,19 @@
-import { NextResponse } from "next/server";
+// middleware.ts
+import { auth } from "@/auth";
 
-export function middleware(request) {
-  const headers = new Headers(request.headers);
-  headers.set("x-current-path", request.nextUrl.pathname);
-  return NextResponse.next({ headers });
-}
+const protectedRoutes = ["/dashboard", "/profile", "/settings"];
+
+export default auth((req) => {
+  const { nextUrl } = req;
+  const isProtected = protectedRoutes.some((route) =>
+    nextUrl.pathname.startsWith(route)
+  );
+
+  if (isProtected && !req.auth?.user) {
+    return Response.redirect(new URL("/login", req.url));
+  }
+});
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  matcher: ["/dashboard/:path*", "/profile/:path*", "/settings/:path*"],
 };
