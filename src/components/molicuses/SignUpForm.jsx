@@ -34,7 +34,7 @@ export const SignupForm = () => {
             .oneOf([true], "You must accept the terms and conditions")
             .required("You must accept the terms and conditions"),
         })}
-        onSubmit={(values, { setSubmitting }) => {
+        onSubmit={async (values, { setSubmitting }) => {
           console.log({ values });
           route.push("/verify-email");
         }}

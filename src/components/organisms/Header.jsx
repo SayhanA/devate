@@ -1,11 +1,17 @@
+import BellSvg from "@/assets/svgs/BellSvg";
 import LogoSvg from "@/assets/svgs/LogoSvg";
+import { auth } from "@/auth";
 import { links } from "@/datas/navLinks";
 import ActiveLink from "../atoms/ActiveLink";
 import CustomLink from "../atoms/CustomLink";
+import UserBtn from "../atoms/UserBtn";
 
-const Header = () => {
+const Header = async () => {
+  const session = await auth();
+  console.log({ session });
+
   return (
-    <header className="px-5 absolute top-0 w-full z-50">
+    <header className="px-5 absolute top-0 w-full z-40">
       <div className="flex items-center justify-between h-fit py-4 container mx-auto">
         <CustomLink
           id="logo"
@@ -25,18 +31,25 @@ const Header = () => {
               </ActiveLink>
             ))}
           </nav>
-          <div id="btns" className="flex items-center gap-3">
-            <div className="mix-blend-difference h-full w-fit">
-              <CustomLink href="/login" className="text-white">
-                Login
-              </CustomLink>
+
+          <BellSvg className="text-white cursor-pointer" />
+
+          {session?.user ? (
+            <UserBtn session={session} />
+          ) : (
+            <div id="btns" className="flex items-center gap-3">
+              <div className="mix-blend-difference h-full w-fit">
+                <CustomLink href="/login" className="text-white">
+                  Login
+                </CustomLink>
+              </div>
+              <div>
+                <CustomLink href="/signup" secondBtn>
+                  Sign Up
+                </CustomLink>
+              </div>
             </div>
-            <div>
-              <CustomLink href="/signup" secondBtn>
-                Sign Up
-              </CustomLink>
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </header>

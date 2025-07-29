@@ -3,7 +3,6 @@ import SectionDescripton from "../atoms/SectionDescripton";
 import SectionTitle from "../atoms/SectionTitle";
 
 const ClientSection = () => {
-  // Sample client data - you can replace with real client images
   const clients = {
     row1: [
       {

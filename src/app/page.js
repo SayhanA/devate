@@ -4,7 +4,7 @@ import FeatureDebates from "@/components/molicuses/FeatureDebates";
 import HeroSection from "@/components/molicuses/HeroSection";
 import SaftySection from "@/components/molicuses/SaftySection";
 
-const HomePage = () => {
+const HomePage = async () => {
   return (
     <>
       <HeroSection />
