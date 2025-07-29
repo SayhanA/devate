@@ -18,7 +18,7 @@ const ProviderBtns = () => {
       </Button>
       <Button
         className="flex items-center w-full gap-3 rounded-sm"
-        onClick={() => login("github")}
+        onClick={() => login("facebook")}
       >
         <IoLogoFacebook />
         Facebook

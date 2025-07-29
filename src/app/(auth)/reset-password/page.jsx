@@ -1,13 +1,11 @@
 import LogoSvg from "@/assets/svgs/LogoSvg";
-import { FcGoogle } from "react-icons/fc";
 import {
   IoChatbubbleEllipsesOutline,
-  IoLogoFacebook,
   IoPeopleOutline,
   IoTrophyOutline,
 } from "react-icons/io5";
-import Button from "@/components/atoms/Button";
 import CustomLink from "@/components/atoms/CustomLink";
+import ProviderBtns from "@/components/atoms/ProviderBtns";
 import Text from "@/components/atoms/Test";
 import { ResetPasswordForm } from "@/components/molicuses/ResetPasswordForm";
 
@@ -75,19 +73,7 @@ const ResetPasswordPage = () => {
               </div>
             </div>
           </div>
-          <div className="w-full mx-auto gap-3 flex mt-8">
-            <Button
-              secondBtn
-              className="flex items-center w-full gap-3 rounded-sm text-white py-3"
-            >
-              <FcGoogle />
-              Google
-            </Button>
-            <Button className="flex items-center w-full gap-3 rounded-sm">
-              <IoLogoFacebook />
-              Facebook
-            </Button>
-          </div>
+          <ProviderBtns />
         </div>
       </div>
       <div className="w-full h-screen flex justify-center items-center">
