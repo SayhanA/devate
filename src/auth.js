@@ -39,7 +39,7 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
             email: data.user.email,
             image: data.user.profilePicture,
             role: data.user.role,
-            accessToken: data.token,
+            token: data.token,
           };
         } catch (err) {
           console.error("Login error:", err);

@@ -24,7 +24,7 @@ export const LoginForm = () => {
     setErrorMessage("");
 
     const res = await signIn("credentials", {
-      redirect: false,
+      redirectTo: "/",
       email: values.email,
       password: values.password,
     });
