@@ -335,7 +335,7 @@ export default function DebateArenaVideo() {
       </div>
 
       {/* Video Controls */}
-      <div className="absolute top-6 right-6 z-50">
+      {/* <div className="absolute top-6 right-6 z-50">
         <div className="bg-black/50 backdrop-blur-sm rounded-lg p-4 space-y-2">
           <div className="flex items-center space-x-2">
             <button
@@ -366,7 +366,7 @@ export default function DebateArenaVideo() {
             ></div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Content */}
       <div className="relative z-10 max-h-[600px] flex items-center justify-center p-8">

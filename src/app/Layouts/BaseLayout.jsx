@@ -1,5 +1,6 @@
 import Footer from "@/components/organisms/Footer";
 import Header from "@/components/organisms/Header";
+import AuthLayout from "./AuthLayout";
 
 const BaseLayout = ({ children = null, className = "", ...props }) => {
   return (
@@ -7,7 +8,9 @@ const BaseLayout = ({ children = null, className = "", ...props }) => {
       <>
         <Header />
         <main>{children}</main>
-        <Footer />
+        <AuthLayout>
+          <Footer />
+        </AuthLayout>
       </>
     </div>
   );
