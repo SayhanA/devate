@@ -68,7 +68,7 @@ const FeatureDebates = () => {
     <section className="py-12 px-4">
       <div className="container mx-auto">
         <SectionTitle tag="Blogs" title="Explore the Debate World" />
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex flex-col sm:flex-row gap-3 justify-between items-center mb-8">
           <Text className="mt-5 max-w-[700px]">
             Enhance your skills in critical thinking and debating. Lorem, ipsum
             dolor sit amet consectetur adipisicing elit. Voluptatum, tenetur!

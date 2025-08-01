@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="container mx-auto pb-10">
         <Text
           as="h1"
-          className="text-5xl text-center pt-40 max-w-[800px] mx-auto leading-[70px] text-white"
+          className="sm:text-5xl text-3xl text-center pt-40 max-w-[800px] mx-auto sm:leading-[70px] text-white"
         >
           Join the Ultimate Debate Experience Today!
         </Text>
@@ -24,7 +24,7 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        <div className="w-4/5 h-[600px] mx-auto my-20 rounded-2xl overflow-hidden">
+        <div className="sm:w-4/5 h-[600px] mx-auto my-20 rounded-2xl overflow-hidden">
           <DebateArenaVideo />
         </div>
       </div>

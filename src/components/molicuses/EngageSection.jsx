@@ -9,7 +9,7 @@ import TextXL from "../atoms/TextXL";
 
 const EngageSection = () => {
   return (
-    <section className="px-10">
+    <section className="sm:px-10 px-5">
       <div className="container mx-auto my-20">
         <SectionTitle tag="Engage" title="How to participate in devates" />
         <SectionDescripton className="mt-5">
@@ -17,7 +17,7 @@ const EngageSection = () => {
           meaningful discussions. Follow these simple steps to create, join, and
           participate in debates.
         </SectionDescripton>
-        <div className="grid grid-cols-3 gap-5 mt-16">
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 mt-16">
           <div className="">
             <MdOutlineSecurity className="text-5xl mb-5" />
             <TextXL className="font-bold mb-3">Step 1: Create a Debate</TextXL>

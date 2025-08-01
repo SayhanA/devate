@@ -15,11 +15,11 @@ export default function Footer() {
               Subscribe to our newsletter for the latest updates on features and
               releases.
             </p>
-            <div className="flex gap-2 mb-3">
+            <div className="flex gap-2 mb-3 w-full">
               <input
                 type="email"
                 placeholder="Your email here"
-                className="flex-1 px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 px-3 py-2 w-full border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <button className="px-4 py-2 bg-gray-900 text-white text-sm rounded-md hover:bg-gray-800 transition-colors">
                 Subscribe

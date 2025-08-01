@@ -10,8 +10,8 @@ import TextLg from "../atoms/TextLg";
 
 const SaftySection = () => {
   return (
-    <section className="px-10 bg-secondary-bg/20">
-      <div className="container mx-auto grid grid-cols-2 my-20">
+    <section className="px-5 py-3 bg-secondary-bg/20">
+      <div className="container mx-auto grid sm:grid-cols-2 my-20">
         <div className=" max-w-[600px] flex justify-center flex-col">
           <SectionTitle
             tag="Safty"
@@ -22,7 +22,7 @@ const SaftySection = () => {
             fostering a respectful environment. Enjoy engaging discussions
             without the worry of inappropriate content.
           </SectionDescripton>
-          <div className="mt-10 flex gap-10">
+          <div className="mt-10 flex flex-col sm:flex-row gap-10">
             <div>
               <TextLg>Toxicity Prevention</TextLg>
               <Text className="mt-4">
@@ -52,7 +52,7 @@ const SaftySection = () => {
           <Image
             src={splingImage}
             alt="Spling checking"
-            className="w-fit ml-auto my-10 h-[600px] shadow-xl rounded-xl"
+            className="w-fit ml-auto my-10 sm:h-[600px] shadow-xl rounded-xl"
           />
         </div>
       </div>

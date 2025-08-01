@@ -13,7 +13,7 @@ const SectionTitle = ({
       {...props}
     >
       <p className="font-bold">{tag}</p>
-      <p className="text-4xl font-semibold mt-3">{title}</p>
+      <p className="sm:text-4xl text-2xl font-semibold mt-3">{title}</p>
     </strong>
   );
 };

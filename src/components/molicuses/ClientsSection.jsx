@@ -335,7 +335,7 @@ const ClientSection = () => {
   const duplicatedRow3 = [...clients.row3, ...clients.row3];
 
   return (
-    <section className="bg-background/0 overflow-hidden py-16">
+    <section className="bg-background/0 overflow-hidden py-16 px-5">
       <div className="mb-12 text-center">
         <SectionTitle tag="Clients" title="Enthusiast Debaters"></SectionTitle>
         <SectionDescripton className="my-10 mx-auto">
