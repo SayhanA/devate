@@ -71,8 +71,8 @@ export default function BlogGrid() {
   ];
 
   return (
-    <section className="py-16 mx-10 bg-gray-50">
-      <div className="container mx-auto px-6">
+    <section className="py-16 sm:mx-10 mx-5 bg-gray-50 mt-5">
+      <div className="container mx-auto sm:px-6">
         <div className="flex flex-col lg:flex-row gap-12 relative">
           {/* Main Content */}
           <div className="lg:w-2/3">
@@ -145,25 +145,25 @@ export default function BlogGrid() {
             </div>
 
             {/* Pagination */}
-            <div className="mt-12 flex justify-center">
-              <nav className="flex items-center space-x-2">
-                <button className="px-3 py-2 text-gray-500 hover:text-gray-700 transition-colors">
+            <div className="mt-12 flex justify-center px-4">
+              <nav className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+                <button className="px-3 py-2 text-sm text-gray-500 hover:text-gray-700 transition-colors">
                   Previous
                 </button>
-                <button className="px-4 py-2 bg-blue-600 text-white rounded-lg">
+                <button className="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg">
                   1
                 </button>
-                <button className="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                <button className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                   2
                 </button>
-                <button className="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                <button className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                   3
                 </button>
-                <span className="px-3 py-2 text-gray-500">...</span>
-                <button className="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                <span className="px-3 py-2 text-sm text-gray-500">...</span>
+                <button className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                   10
                 </button>
-                <button className="px-3 py-2 text-gray-500 hover:text-gray-700 transition-colors">
+                <button className="px-3 py-2 text-sm text-gray-500 hover:text-gray-700 transition-colors">
                   Next
                 </button>
               </nav>

@@ -6,7 +6,7 @@ export default function BlogHero() {
       <div className="container mx-auto px-6 text-center">
         <Text
           as="h1"
-          className="text-5xl text-center max-w-[800px] mx-auto leading-[70px] text-white"
+          className="sm:text-5xl text-4xl text-center max-w-[800px] mx-auto sm:leading-[70px] text-white"
         >
           Devata Arena Blog
         </Text>

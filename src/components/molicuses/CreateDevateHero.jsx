@@ -7,7 +7,7 @@ const CreateDevateHero = () => {
       <div className="container mx-auto pb-32">
         <Text
           as="h1"
-          className="text-5xl text-center pt-40 max-w-[600px] mx-auto leading-[70px] text-white"
+          className="sm:text-5xl text-4xl text-center pt-40 max-w-[600px] mx-auto sm:leading-[70px] text-white"
         >
           Create Debate
         </Text>

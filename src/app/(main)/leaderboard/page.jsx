@@ -221,11 +221,11 @@ export default function LeaderboardBoard() {
             </p>
           </div>
           <div className="p-6">
-            <div className="space-y-4">
+            <div className="space-y-4 overflow-scroll">
               {leaderboardData.map((user) => (
                 <div
                   key={user.id}
-                  className="flex items-center justify-between p-4 rounded-lg border border-border hover:bg-card-bg transition-colors"
+                  className="flex items-center justify-between p-4 rounded-lg border border-border w-fit hover:bg-card-bg transition-colors"
                 >
                   <div className="flex items-center gap-4">
                     <div className="flex items-center justify-center w-10">

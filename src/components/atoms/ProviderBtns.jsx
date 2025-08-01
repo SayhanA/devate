@@ -5,12 +5,12 @@ import { IoLogoFacebook } from "react-icons/io5";
 import { login } from "@/lib/actions/auth";
 import Button from "./Button";
 
-const ProviderBtns = () => {
+const ProviderBtns = ({ className = "" }) => {
   return (
-    <div className="w-full mx-auto gap-3 flex mt-8">
+    <div className={`w-full mx-auto gap-3 flex mt-8 ${className}`}>
       <Button
         secondBtn
-        className="flex items-center w-full gap-3 rounded-sm text-white py-3"
+        className="flex items-center w-full gap-3 rounded-sm sm:py-3 mix-blend-difference  text-white"
         onClick={() => login("google")}
       >
         <FcGoogle />

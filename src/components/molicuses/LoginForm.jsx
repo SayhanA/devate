@@ -39,7 +39,7 @@ export const LoginForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6">
+    <div className="sm:max-w-md w-full mx-auto sm:mt-10 p-6">
       <Formik
         initialValues={{ email: "", password: "" }}
         validationSchema={validationSchema}
