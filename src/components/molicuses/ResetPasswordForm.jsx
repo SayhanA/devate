@@ -9,7 +9,7 @@ export const ResetPasswordForm = () => {
   const route = useRouter();
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg">
+    <div className="max-w-md mx-auto sm:mt-10 p-6 bg-white rounded-lg">
       <Formik
         initialValues={{
           otp: "",

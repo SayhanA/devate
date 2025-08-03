@@ -2,7 +2,7 @@
 
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import CustomLink from "../atoms/CustomLink";
@@ -19,6 +19,24 @@ const validationSchema = Yup.object({
 export const LoginForm = () => {
   const router = useRouter();
   const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    const handleFocus = (e) => {
+      const target = e.target;
+      if (target && target.tagName === "INPUT") {
+        // Scroll to input
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 100); // Slight delay for keyboard to appear
+      }
+    };
+
+    window.addEventListener("focusin", handleFocus);
+
+    return () => {
+      window.removeEventListener("focusin", handleFocus);
+    };
+  }, []);
 
   const handleSubmit = async (values, { setSubmitting }) => {
     setErrorMessage("");

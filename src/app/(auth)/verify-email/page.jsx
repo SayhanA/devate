@@ -6,6 +6,7 @@ import {
 } from "react-icons/io5";
 import CustomLink from "@/components/atoms/CustomLink";
 import ProviderBtns from "@/components/atoms/ProviderBtns";
+import SectionTitle from "@/components/atoms/SectionTitle";
 import Text from "@/components/atoms/Test";
 import { VerifyEmailForm } from "@/components/molicuses/VerifyEmailForm";
 
@@ -16,8 +17,8 @@ export const metadata = {
 
 const VerifyEmailPage = () => {
   return (
-    <section className="flex w-full">
-      <div className="bg-secondary-bg w-full h-screen flex justify-center items-center">
+    <section className="sm:grid sm:grid-cols-2 min-h-screen">
+      <div className="bg-secondary-bg w-full h-screen sm:flex justify-center items-center hidden">
         <div className="w-[70%] ">
           <div className="flex items-center space-x-3 ">
             <div className="bg-gradient-to-r from-blue-900 to-secondary-bg p-3 rounded-xl">
@@ -75,8 +76,9 @@ const VerifyEmailPage = () => {
           <ProviderBtns />
         </div>
       </div>
-      <div className="w-full h-screen flex justify-center items-center">
-        <div className="w-[70%] min-h-[400px]">
+      <div className="h-screen w-full flex sm:flex-row flex-col justify-center items-center">
+        <SectionTitle title="Verify Email" className="sm:hidden" />
+        <div className="sm:w-[70%] sm:min-h-[400px] w-[320px]">
           <VerifyEmailForm />
         </div>
       </div>

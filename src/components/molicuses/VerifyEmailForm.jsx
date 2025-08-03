@@ -2,17 +2,38 @@
 
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export const VerifyEmailForm = () => {
-  const route = useRouter();
+  const router = useRouter();
+
+  const [counter, setCounter] = useState(30);
+  const [isResending, setIsResending] = useState(false);
+
+  useEffect(() => {
+    let timer;
+    if (counter > 0) {
+      timer = setTimeout(() => setCounter(counter - 1), 1000);
+    }
+    return () => clearTimeout(timer);
+  }, [counter]);
+
+  const handleResend = () => {
+    setIsResending(true);
+    setCounter(30);
+
+    // Simulate API call
+    setTimeout(() => {
+      console.log("OTP resent");
+      setIsResending(false);
+    }, 1000);
+  };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg">
+    <div className="max-w-md mx-auto sm:mt-10 p-6 bg-white rounded-lg">
       <Formik
-        initialValues={{
-          otp: "",
-        }}
+        initialValues={{ otp: "" }}
         validationSchema={Yup.object({
           otp: Yup.string()
             .min(6, "Must be at least 6 characters")
@@ -20,13 +41,13 @@ export const VerifyEmailForm = () => {
         })}
         onSubmit={(values, { setSubmitting }) => {
           console.log({ values });
-          route.push("/login");
+          router.push("/login");
         }}
       >
         <Form className="space-y-5">
-          {/* otp */}
+          {/* OTP input */}
           <div>
-            <label htmlFor="otp" className="block text-sm text-tp font-bold">
+            <label htmlFor="otp" className="block text-sm font-bold text-tp">
               OTP
             </label>
             <Field
@@ -47,6 +68,21 @@ export const VerifyEmailForm = () => {
           >
             Submit
           </button>
+          {/* Countdown + Resend button */}
+          <div className="text-sm flex items-center justify-between">
+            {counter > 0 ? (
+              <p className="text-gray-600">Resend available in {counter}s</p>
+            ) : (
+              <button
+                type="button"
+                onClick={handleResend}
+                disabled={isResending}
+                className={`text-blue-600 hover:underline transition disabled:opacity-50`}
+              >
+                {isResending ? "Resending..." : "Resend OTP"}
+              </button>
+            )}
+          </div>
         </Form>
       </Formik>
     </div>
